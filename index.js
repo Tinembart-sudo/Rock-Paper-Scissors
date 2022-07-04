@@ -1,60 +1,100 @@
-//Initialize Array with 3 Values - Rock, Paper and Cissors in this direction
+//Initialize Array with 3 Values - rock, paper and Cissors in this direction
 //Afterwards check array index of choice
 
-const choiceArray = ["Rock", "Paper", "Scissors"]
-
 /*
-1 = Rock
-2 = Paper
-3 = Scissors 
+1 = rock
+2 = paper
+3 = scissors 
 */
 
-// Function do determine which number is Rock, Paper, or Scissors
+
+//Running Block Lets try (delete me)
+
+let variable = whoIsWinner(playerOnePick(), playerTwoPick())
+console.log(variable)
+
+// Function do determine which number is rock, paper, or scissors
 function convertToString(number) {
-    const output = null
-    while (output = null) {
+    let output
         switch (number) {
             case 1:
-                output = "Rock"
+                output = "rock"
                 break;
             case 2:
-                output = "Paper"
+                output = "paper"
                 break;
             case 3:
-                output = "Scissors"
+                output = "scissors"
                 break;
             default:
                 break;
         }
-    }
     return output
 }
 
-//Opens a prompt Windows and lets user pick Rock Paper or Scissor by number
+//Opens a prompt Windows and lets user pick rock paper or Scissor by number
+//returns string
 function playerOnePick() {
     let promptinput = prompt(`Choose:
-1 = Rock
-2 = Paper
-3 = Scissors`)
-    return convertToString(parseInt(promptinput))
+Rock
+Paper
+Scissors`)
+    const choice = promptinput.toLowerCase()
+    console.log("Player 1 choose: " + choice)
+    return choice
 }
 
-// player 2 picks with a random number between 1 - 3
+// player 2 picks with a random number between 1 - 3 returns string
 function playerTwoPick() {
-    let randomNumber = Math.floor(Math.random() * 3 + 1)
-    return convertToString(randomNumber)
+    let randomNumber = Math.floor(Math.random() * 3 +1)
+    let choice = convertToString(randomNumber)
+    console.log("player 2 choose: " + choice)
+    return choice
 }
 
 
 // return "Win" if user wins, "lose" if users loses and "tie" if its a tie
 function whoIsWinner(choiceOne, choiceTwo) {
-    if (choiceArray.indexOf(choiceOne) == choiceArray.indexOf(choiceTwo)) {
-        return "Tie"
+    console.log(choiceOne)
+        console.log(choiceTwo)
+    if (choiceOne == choiceTwo) {
+        
+        console.log("1")
+        return "tie"
     }
-    
 
+    //rock
+    if (choiceOne == "rock") {
+        if (choiceTwo == "scissors") {
+            console.log("2")
+            return "Win"
+        } else {
+            console.log("2")
+            return "Lose"
+        }
+    }
 
+    //paper
+    if (choiceOne == "paper") {
+        if (choiceTwo == "rock") {
+            console.log("3")
+            return "Win"
+        } else {
+            console.log("3")
+            return "Lose"
+        }
+    }
 
+    //scissors
+    if (choiceOne == "scissors") {
+        if (choiceTwo == "paper") {
+            console.log("4")
+            return "Win"
+        } else {
+            console.log("4")
+            return "Lose"
+        }
+    }
 }
 
 
