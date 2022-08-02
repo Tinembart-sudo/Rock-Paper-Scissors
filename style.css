@@ -1,0 +1,28 @@
+.container {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    padding: 10%;
+}
+
+#billboard {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+#scoreboard {
+    flex: 1 1 35%;
+}
+
+.points {
+    flex: 1 1 33%;
+    font-size: large;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container button {
+    flex: 1 1 100%;
+    background-color: aqua;
+}

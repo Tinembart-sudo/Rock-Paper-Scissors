@@ -1,13 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="index.js"></script>
+    <script src="index.js" defer></script>
+    <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
+
 <body>
-    <iframe width="768" height="432" src="https://miro.com/app/embed/uXjVOo0lAqQ=/?pres=1&frameId=3458764528733148667&embedId=129434152952" frameborder="0" scrolling="no" allowfullscreen></iframe>
+    <div id="billboard">
+        <div id="playerOne" class="points">0</div>
+        <div id="playerTwo" class="points">0</div>
+        <div id="scoreboard" ></div>
+    </div>
+    <div class="container">
+        <button class="key" data-id="rock">Rock</button>
+        <button class="key" data-id="paper">Paper</button>
+        <button class="key" data-id="scissors">Scissors</button>
+    </div>
 </body>
+
 </html>
